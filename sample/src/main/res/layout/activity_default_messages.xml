@@ -1,0 +1,61 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/root"
+    android:layout_height="match_parent"
+    android:background="@color/blue">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/separator"/>
+
+    <TextView
+        android:background="#000000"
+        android:layout_centerVertical="true"
+        android:id="@+id/separator"
+        android:text="Drag or fling here to resize"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+
+    <RelativeLayout
+        android:layout_below="@+id/separator"
+        android:layout_width="match_parent"
+        android:id="@+id/chater"
+        android:background="@color/white"
+        android:layout_height="match_parent" >
+        <com.stfalcon.chatkit.messages.MessagesList
+            android:id="@+id/messagesList"
+            android:layout_width="match_parent"
+            app:textAutoLink="all"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/input"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/input"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/gray_light"/>
+
+        <com.stfalcon.chatkit.messages.MessageInput
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:inputHint="@string/hint_enter_a_message"
+            app:showAttachmentButton="true"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+
+
