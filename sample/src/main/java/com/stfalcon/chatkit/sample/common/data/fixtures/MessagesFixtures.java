@@ -21,12 +21,23 @@ public final class MessagesFixtures extends FixturesData {
         return message;
     }
 
-    public static Message getVoiceMessage() {
+    public static Message getImageMessage2() {
         Message message = new Message(getRandomId(), getUser(), null);
-        message.setVoice(new Message.Voice("http://example.com", rnd.nextInt(200) + 30));
+        message.setImage(new Message.Image("https://pbs.twimg.com/media/DAd_BS7XsAIVZoG.jpg"));
         return message;
     }
 
+    public static Message getVoiceMessage() {
+        Message message = new Message(getRandomId(), getUser(), null);
+        message.setVoice(new Message.Voice("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", rnd.nextInt(200) + 30));
+        return message;
+    }
+    public static Message getButton() {
+        Message message = new Message(getRandomId(), getUser(), null);
+        message.setButton1(new Message.Button1("Example.com"));
+        //message.se(new Message.Voice("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", rnd.nextInt(200) + 30));
+        return message;
+    }
     public static Message getTextMessage() {
         return getTextMessage(getRandomMessage());
     }

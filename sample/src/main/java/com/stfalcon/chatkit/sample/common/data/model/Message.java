@@ -1,5 +1,8 @@
 package com.stfalcon.chatkit.sample.common.data.model;
 
+import android.graphics.drawable.Drawable;
+import android.widget.Button;
+
 import com.stfalcon.chatkit.commons.models.IMessage;
 import com.stfalcon.chatkit.commons.models.MessageContentType;
 
@@ -18,6 +21,7 @@ public class Message implements IMessage,
     private User user;
     private Image image;
     private Voice voice;
+    private Button1 button1;
 
     public Message(String id, User user, String text) {
         this(id, user, text, new Date());
@@ -58,6 +62,9 @@ public class Message implements IMessage,
     public Voice getVoice() {
         return voice;
     }
+    public Button1 getButton1() {
+        return button1;
+    }
 
     public String getStatus() {
         return "Sent";
@@ -77,6 +84,9 @@ public class Message implements IMessage,
 
     public void setVoice(Voice voice) {
         this.voice = voice;
+    }
+    public void setButton1(Button1 button1) {
+        this.button1 = button1;
     }
 
     public static class Image {
@@ -105,5 +115,30 @@ public class Message implements IMessage,
         public int getDuration() {
             return duration;
         }
+    }
+    public static class Button1 {
+
+        private String url;
+        //private Drawable drawable;
+        //private String text;
+
+       // public Button1(String url, Drawable drawable,String text) {
+            public Button1(String url) {
+            this.url = url;
+            //this.drawable = drawable;
+            //this.text=text;
+        }
+
+        public String getUrl() {
+            return url;
+        }
+//        public String getText() {
+//            return text;
+//        }
+//
+//        public Drawable getDrawable() {
+//            return drawable;
+//        }
+
     }
 }

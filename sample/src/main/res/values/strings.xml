@@ -26,7 +26,7 @@
 
     <string-array name="view_types_dialog">
         <item name="image">Image (default)</item>
-        <item name="voice">Voice message (custom)</item>
+        <item name="voice">Button message (custom)</item>
     </string-array>
 
     <string name="start_typing_status">Start typing</string>
